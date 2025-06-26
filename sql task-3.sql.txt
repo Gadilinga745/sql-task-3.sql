@@ -1,0 +1,47 @@
+CREATE DATABASE task3;
+USE task3;
+
+CREATE TABLE Employees (
+    EmpID INT PRIMARY KEY,
+    FullName VARCHAR(100),
+    Department VARCHAR(50),
+    Salary INT,
+    JoinDate DATE,
+    Country VARCHAR(50)
+);
+
+INSERT INTO Employees VALUES
+(1, 'Alaikya', 'IT', 75000, '2020-03-15', 'USA'),
+(2, 'Bhavya', 'HR', 50000, '2019-07-23', 'India'),
+(3, 'Cherry', 'IT', 82000, '2021-01-10', 'UK'),
+(4, 'Dimp', 'Finance', 60000, '2018-09-05', 'USA'),
+(5, 'Erappa', 'IT', 90000, '2022-05-19', 'India');
+
+SELECT * FROM Employees;
+
+SELECT FullName, Department, Salary FROM Employees;
+
+SELECT * FROM Employees
+WHERE Department = 'IT';
+
+SELECT FullName, Salary FROM Employees
+WHERE Salary > 70000;
+
+SELECT * FROM Employees
+WHERE Department = 'IT' AND Country = 'India';
+
+SELECT * FROM Employees
+WHERE FullName LIKE 'A%';
+
+SELECT * FROM Employees
+WHERE Salary BETWEEN 60000 AND 85000;
+
+SELECT * FROM Employees
+ORDER BY Salary DESC;
+
+SELECT * FROM Employees
+ORDER BY Salary DESC
+LIMIT 3;
+
+
+
